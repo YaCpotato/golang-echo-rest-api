@@ -6,7 +6,7 @@ COPY go.sum /app/go.sum
 WORKDIR /app
 COPY . /app
 
-RUN go get -u github.com/gin-gonic/gin
+RUN go install
 
 ENV CGO_ENABLED=0 \
     GOOS=linux \
